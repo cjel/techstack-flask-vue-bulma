@@ -1,0 +1,13 @@
+/.venv
+/.virtualenv/
+/dist/
+/lib/*
+!/lib/.keep
+/node_modules/
+/static/
+/templates/
+/venv/
+/run/*
+!/run/.keep
+__pycache__/
+*.vimsession

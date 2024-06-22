@@ -1,0 +1,20 @@
+version: '3'
+volumes:
+  data:
+services:
+  db:
+    image: mariadb:5.5
+    user: 1000:1000
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_bin
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./lib:/var/lib/mysql
+    #  - data:/var/lib/mysql
+    #  - ./db:/data
+      - ./run:/var/run/mysqld
+    #ports:
+    #  - 8306:3306
